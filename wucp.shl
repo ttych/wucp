@@ -178,9 +178,14 @@ _wucp_add()
         return 1
     fi
 
+    case "$2" in
+        /*) _wucp_add__bundle="$2" ;;
+        *) _wucp_add__bundle="$PWD/$2" ;;
+    esac
+
     mkdir -p "$WUCP_DIR/$1" &&
         cd "$WUCP_DIR/$1" &&
-        unzip "$2"
+        unzip "$_wucp_add__bundle"
 )
 
 
