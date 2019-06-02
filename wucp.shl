@@ -145,7 +145,7 @@ _wucp_load()
     _wucp_load__pwd="$PWD"
 
     if cd "$WUCP_DIR/$1" 2>/dev/null; then
-        . ./env.sh
+        . ./env.sh > /dev/null
         _wucp_compute_cred_ck
         WUCP_LOADED_CRED_CK="$_wucp_compute_cred_ck"
     fi
