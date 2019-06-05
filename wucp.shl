@@ -185,7 +185,7 @@ _wucp_add()
 
     mkdir -p "$WUCP_DIR/$1" &&
         cd "$WUCP_DIR/$1" &&
-        unzip "$_wucp_add__bundle"
+        unzip -q "$_wucp_add__bundle"
 )
 
 
