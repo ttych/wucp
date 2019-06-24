@@ -267,10 +267,11 @@ wucp()
     return $wucp
 }
 
-if [ "${0##*/}" = "wucp.shl" ]; then
-    cat >&2 <<EOF
-# not supposed to be used this way
-# first do :
-. $0
-EOF
-fi
+
+# if [ "${0##*/}" = "wucp.shl" ] && [ $# -gt 0 ]; then
+#      cat >&2 <<EOF
+# # not supposed to be used this way
+# # first do :
+# . $0
+# EOF
+# fi
